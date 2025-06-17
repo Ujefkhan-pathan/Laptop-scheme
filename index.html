@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Laptop Scheme 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Free Laptops for Students</h1>
+        <p><strong>2025 Edition</strong></p>
+        <p>Be part of the successful students that will receive a laptop to help them in learning better</p>
+        <p>1. You must be a student <span class="highlight">(Age bracket 10-50 years)</span></p>
+        <p>2. You must be able to read and write</p>
+        <form action="/submit-form" method="POST">
+            <input type="text" name="fullName" placeholder="Enter Your Full Name" required>
+            <select name="educationLevel" required>
+                <option value="">Select Educational Level</option>
+                <option value="Primary">Primary</option>
+                <option value="Secondary">Secondary</option>
+                <option value="College">College</option>
+                <option value="University">University</option>
+            </select>
+            <select name="laptopBrand" required>
+                <option value="">Select Laptop Brand</option>
+                <option value="HP">HP</option>
+                <option value="Dell">Dell</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="Asus">Asus</option>
+            </select>
+            <label for="ageVerification">Get this question right to prove your age: 5 + 1 =</label>
+            <input type="text" name="ageAnswer" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
