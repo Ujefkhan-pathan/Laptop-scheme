@@ -34,5 +34,41 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <!-- Success Message (hidden initially) -->
+<div id="success-message" style="display: none;">
+  <div class="checkmark">✓</div>
+  <h2>🎉 Application Submitted!</h2>
+  <p>Thank you for applying. We'll contact you soon!</p>
+  <button onclick="resetForm()">Apply Again</button>
+</div>
+
+<script>
+// Handle form submission
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simple validation
+    if (document.querySelector('[name="ageAnswer"]').value !== '6') {
+      alert('Please answer the age question correctly (5 + 1 = 6)');
+      return;
+    }
+
+    // Hide form, show success
+    document.querySelector('.container').style.display = 'none';
+    document.getElementById('success-message').style.display = 'block';
+    
+    // Optional: Submit data to server (matches your backend)
+    fetch('/submit-form', {
+      method: 'POST',
+      body: new FormData(this)
+    });
+  });
+
+  function resetForm() {
+    location.reload(); // Reloads the page to apply again
+  }
+
+</script>
+
 </body>
 </html>
